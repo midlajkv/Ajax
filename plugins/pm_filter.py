@@ -117,7 +117,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer("ലിങ്ക് കാലഹരണപ്പെട്ടു ദയവായി വീണ്ടും തിരയുക 🙂.", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('മൊതലാളി ഇപ്പൊ വരാം സിനിമ ഉണ്ടോന്ന് നോക്കട്ടെ ...')
+    await query.answer('checking database ...')
     k = await manual_filters(bot, query.message, text=movie)
     if k==False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -125,7 +125,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('നഹി നഹീന്ന് പറഞ്ഞ നഹി 😥')
+            k = await query.message.edit('no this movie 😥')
             await asyncio.sleep(10)
             await k.delete()
 
