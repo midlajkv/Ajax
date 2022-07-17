@@ -34,22 +34,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/OpusTechz')
+            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/MkTgBots'),
             ],[      
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton('𝘼𝘽𝙊𝙐𝙏', callback_data='about')
         ]]
-        await message.reply_chat_action("typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAEBB2liJjsNVSkfAy_OtYR0Q48dN_9DsAACGgIAAv68YVTI6jnmvnlZlh4E") 
-        await asyncio.sleep(1)
-        await m.delete()
-        await message.reply_chat_action("typing")
-        m=await message.reply_text("ₐₗbₑᵣₜ ₑᵢₙₛₜₑᵢₙ") 
-        await asyncio.sleep(1)
-        await m.delete()          
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -83,22 +74,13 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/OpusTechz')
+            InlineKeyboardButton('𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/MkTgBots'),
             ],[      
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            InlineKeyboardButton('𝙃𝙀𝙇𝙋', callback_data='help'),
+            InlineKeyboardButton('𝘼𝘽𝙊𝙐𝙏', callback_data='about')
         ]]
-        await message.reply_chat_action("typing")
-        m=await message.reply_sticker("CAACAgUAAxkBAAEBB2liJjsNVSkfAy_OtYR0Q48dN_9DsAACGgIAAv68YVTI6jnmvnlZlh4E") 
-        await asyncio.sleep(1)
-        await m.delete()
-        await message.reply_chat_action("typing")
-        m=await message.reply_text("ₐₗbₑᵣₜ ₑᵢₙₛₜₑᵢₙ") 
-        await asyncio.sleep(1)
-        await m.delete()          
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
