@@ -42,6 +42,14 @@ async def start(client, message):
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
         ]]
+        await message.reply_chat_action("typing")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEBB2liJjsNVSkfAy_OtYR0Q48dN_9DsAACGgIAAv68YVTI6jnmvnlZlh4E") 
+        await asyncio.sleep(1)
+        await m.delete()
+        await message.reply_chat_action("typing")
+        m=await message.reply_text("ₐₗbₑᵣₜ ₑᵢₙₛₜₑᵢₙ") 
+        await asyncio.sleep(1)
+        await m.delete()          
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -83,6 +91,14 @@ async def start(client, message):
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
         ]]
+        await message.reply_chat_action("typing")
+        m=await message.reply_sticker("CAACAgUAAxkBAAEBB2liJjsNVSkfAy_OtYR0Q48dN_9DsAACGgIAAv68YVTI6jnmvnlZlh4E") 
+        await asyncio.sleep(1)
+        await m.delete()
+        await message.reply_chat_action("typing")
+        m=await message.reply_text("ₐₗbₑᵣₜ ₑᵢₙₛₜₑᵢₙ") 
+        await asyncio.sleep(1)
+        await m.delete()          
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
